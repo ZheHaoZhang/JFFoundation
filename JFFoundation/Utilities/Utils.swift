@@ -8,6 +8,8 @@
 
 import UIKit
 
+public let rootViewController = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController
+
 public class Utils: NSObject {
    
     public class func delay(_ delay: Double, closure:@escaping () -> Void) {

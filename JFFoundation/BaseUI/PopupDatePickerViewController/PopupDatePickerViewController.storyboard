@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I55-5X-xjT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Popup Date Picker View Controller-->
+        <scene sceneID="YCl-Pj-nqU">
+            <objects>
+                <viewController storyboardIdentifier="PopupDatePickerViewController" modalPresentationStyle="overCurrentContext" id="I55-5X-xjT" customClass="PopupDatePickerViewController" customModule="JFFoundation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VAL-lu-0iM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hV-gA-L4T">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="peV-pW-lkk">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXp-uu-aRW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="fyw-Vi-ShE">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="light"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8hV-gA-L4T" secondAttribute="bottom" id="2eD-Af-Lhv"/>
+                            <constraint firstItem="8hV-gA-L4T" firstAttribute="top" secondItem="VAL-lu-0iM" secondAttribute="top" id="EiI-UZ-v2w"/>
+                            <constraint firstItem="8hV-gA-L4T" firstAttribute="leading" secondItem="fTx-Ws-fQd" secondAttribute="leading" id="RCy-Sk-BhU"/>
+                            <constraint firstAttribute="trailing" secondItem="8hV-gA-L4T" secondAttribute="trailing" id="zlI-je-C5P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fTx-Ws-fQd"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="1TZ-7j-qvZ" id="vMI-Oa-aSR"/>
+                        <outlet property="doneButton" destination="sfA-1M-Dj6" id="uSd-bJ-kz0"/>
+                        <outlet property="exitButton" destination="Hdb-d4-Gqj" id="QgX-ki-o8A"/>
+                        <outlet property="popupView" destination="oMH-Nu-A02" id="ExV-4p-Qvm"/>
+                        <outlet property="visualEffectView" destination="8hV-gA-L4T" id="4Mh-pa-cWk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PG4-4H-iUj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="oMH-Nu-A02">
+                    <rect key="frame" x="0.0" y="0.0" width="290" height="233"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cT4-rY-OIc">
+                            <rect key="frame" x="0.0" y="0.0" width="290" height="233"/>
+                            <subviews>
+                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="1TZ-7j-qvZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="290" height="188"/>
+                                </datePicker>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICJ-la-6kr">
+                                    <rect key="frame" x="0.0" y="188" width="290" height="1"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="gQS-gq-cFc"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rex-Ww-YsV">
+                                    <rect key="frame" x="0.0" y="189" width="290" height="44"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hdb-d4-Gqj">
+                                            <rect key="frame" x="0.0" y="7" width="144.5" height="30"/>
+                                            <state key="normal" title="取消"/>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWt-ft-F1U">
+                                            <rect key="frame" x="144.5" y="0.0" width="1" height="44"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="1" id="w0k-Bz-EiF"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfA-1M-Dj6">
+                                            <rect key="frame" x="145.5" y="7" width="144.5" height="30"/>
+                                            <state key="normal" title="确认"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="wWt-ft-F1U" secondAttribute="bottom" id="54R-Yn-eFP"/>
+                                        <constraint firstItem="sfA-1M-Dj6" firstAttribute="width" secondItem="Hdb-d4-Gqj" secondAttribute="width" id="Zu6-hs-N8l"/>
+                                        <constraint firstAttribute="height" constant="44" id="dBr-hb-9tj"/>
+                                        <constraint firstItem="sfA-1M-Dj6" firstAttribute="height" secondItem="Hdb-d4-Gqj" secondAttribute="height" id="ePT-QN-q2x"/>
+                                        <constraint firstItem="wWt-ft-F1U" firstAttribute="top" secondItem="rex-Ww-YsV" secondAttribute="top" id="hNw-9F-EC2"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="cT4-rY-OIc" secondAttribute="bottom" id="8bf-31-TGh"/>
+                        <constraint firstItem="VzQ-UP-Fgb" firstAttribute="trailing" secondItem="cT4-rY-OIc" secondAttribute="trailing" id="Knj-6u-hBo"/>
+                        <constraint firstItem="cT4-rY-OIc" firstAttribute="top" secondItem="oMH-Nu-A02" secondAttribute="top" id="LMw-hi-klK"/>
+                        <constraint firstItem="cT4-rY-OIc" firstAttribute="leading" secondItem="VzQ-UP-Fgb" secondAttribute="leading" id="Qxf-Tc-Dho"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="VzQ-UP-Fgb"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="100" y="159"/>
+        </scene>
+    </scenes>
+</document>
